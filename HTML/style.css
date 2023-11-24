@@ -1,0 +1,39 @@
+/* body {
+  background-color:aliceblue;
+}
+/* a {
+  color:#000000;
+  font-size: 50px;
+  text-decoration:none;
+} */
+/* img {
+ max-width: 90%;
+}
+table {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #000000;
+} */
+/* ul {
+  /* list-style-type: circle; */
+  /* list-style-type: square; */
+  /* list-style-type: disc; */
+  /* list-style-type: none;
+} */
+/* h1, p,span,strong{
+  border: 1px solid red;
+}*/  
+#title{
+  background-color: red;
+ color:white;
+ padding: 10px;
+
+}
+.title{
+  background-color: yellowgreen;
+}
+iframe {
+ border: 0;
+}
