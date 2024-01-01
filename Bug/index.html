@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buggy Web App - Testing Purposes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Buggy Web App - Testing Purposes</h1>
+
+    <div class="buggy-feature">
+        <h2>Bug #1 - Broken Form Validation:</h2>
+        <form id="buggyForm" onsubmit="return submitForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <div class="buggy-feature">
+        <h2>Bug #2 - Unexpected Alert:</h2>
+        <button id="alertButton" onclick="showAlert()">Click Me</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
