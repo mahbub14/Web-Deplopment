@@ -1,0 +1,9 @@
+.parent{
+    background-color: #574b98;
+    color:#fff;
+    width: 24%;
+    margin: 1%;
+    padding: 2%;
+    border: 0.5em solid tomato;
+    float: left;
+}
