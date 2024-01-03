@@ -1,5 +1,11 @@
 <?php
-$students=array("rohim","karim","jamal");
+$students=array(
+  "rohim",
+  "karim",
+  123,
+  "jamal");
+echo $students[0]."\n";
+var_dump($students);
 $n=count($students);
 for($i=0;$i<$n;$i++){
     echo $students[$i]."\n";

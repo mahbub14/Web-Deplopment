@@ -1,0 +1,20 @@
+<?php
+$fruits=array("apple","banna","orange","plum","dates","mange");
+//$someFruits=array_slice($fruits,2);
+//$someFruits=array_slice($fruits,2,6);
+//$someFruits=array_slice($fruits,-4,2);
+//$someFruits=array_slice($fruits,-5,-1);
+$someFruits=array_slice($fruits,-5,-1,true);
+print_r($someFruits);
+$ramdom=[
+    "a"=>12,
+    "b"=>13,
+    "c"=>31,
+    "d"=>45,
+    12=>24,
+    "e"=>25,
+    "f"=>78
+];
+$ramdomData=array_slice($ramdom,3);
+print_r($ramdomData);
+?>

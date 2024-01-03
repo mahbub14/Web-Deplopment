@@ -3,7 +3,7 @@
 $students=[
     '12'=>'hasan',
     '13'=>'karim',
-    '20'=>'jamal'
+    '20'=>'habib'
 ];
 echo $students["12"]."\n";
 
@@ -27,5 +27,9 @@ print_r($values);
 for($i=0;$i<count($keys);$i++){
     
     echo $foods[$keys[$i]]."\n";
+}
+for($i=0;$i<count($values);$i++){
+    
+    echo $values[$i]."\n";
 }
 ?>

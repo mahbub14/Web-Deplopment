@@ -1,4 +1,5 @@
 <?php
+//mutable 
 $students=array("rohim","karim","jamal");
 $n=count($students);
 for($i=0;$i<$n;$i++){
