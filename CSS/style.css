@@ -1,15 +1,13 @@
-*{
-  margin: 0;
-  padding: 0;
+h1{
+    color: red;
+    background-color: green;
 }
-h1 {
-  color: tomato;
-  text-align: center;
+body{
+   background-color: black;
+   background-image: url(01.jpg);
+   background-repeat:no-repeat ;
+   background-position: right;
 }
-.one{
-  text-align: center;
-  text-align-last:left ;
-}
-.two{
-  text-align: center;
+p{
+    color: white;
 }
