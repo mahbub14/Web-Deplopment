@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="POST">
+        <h1 style="text-align: center;">Sign Up Form</h1>
+        <hr>
+        <br>
+        <label for="user">Name:</label>
+        <input type="text" id="user" name="user" placeholder="Use Name">
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="usermail" id="email" placeholder="User Mail" required>
+        <br>
+        <label for="phn">Phone:</label>
+        <br>
+        <select name="code">
+            <option value="+880">+880</option>
+            <option value="+990">+990</option>
+            <option value="+110">+110</option>
+        </select>
+        <input type="number"id="phn" name="phn" placeholder="12345678" required>
+        <br>
+        <label for="">Country</label>
+        <input list="con">
+        <datalist id="con">
+            <option value="Bangladesh">Bangladesh</option>
+            <option value="India">India</option>
+            <option value="Canda">Canda</option>
+        </datalist>
+        <br>
+        Gender:
+        <input type="radio" id="gnd1" name="gender">
+        <label for="gnd1">Male</label>
+        <input type="radio" id="gnd2"name="gender">
+        <label for="gnd2">Female</label>
+        <br>
+        <label for="date">Date of Birth</label>
+        <input type="date" name="dob" id="date">
+        <br>
+        <label for="time">Time</label>
+        <input type="time" name="tme" id="time">
+        <br>
+        <label for="color">Color</label>
+        <input type="color" name="col" id="color">
+        <br>
+        <label for="file">Your Photo</label>
+        <input type="file" name="fle" id="file">
+        <br>
+        <input type="checkbox" name="vehicle1" id="vehiclel1">
+        <label for="vehiclel">I have Bike</label>
+        <input type="checkbox" name="vehicle2" id="vehicle2">
+        <label for="vehicle2">I have Bycycle</label>
+        <br>
+        <label for="Country">Country</label>
+        <textarea name="" id="" cols="30" rows="10">Your Comment</textarea>
+        <br>
+        <input type="submit" value="Send">
+        <input type="submit" value="Reset">
+
+
+
+    </form>
+</body>
+</html>
