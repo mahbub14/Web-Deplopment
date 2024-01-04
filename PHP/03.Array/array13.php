@@ -1,0 +1,21 @@
+<?php
+$fruits=array("apple","banna","orange","plum","dates","mange");
+$ramdom=[
+    "a"=>12,
+    "b"=>13,
+    "c"=>31,
+    "d"=>45,
+    "e"=>25,
+    "f"=>78,
+    12=>78,
+    "g"=>87
+];
+$r1=array_slice($ramdom,0,2,true);
+$r2=array_slice($ramdom,4,null,true);
+$r3=array("j"=>45,"k"=>12);
+$ramdomData=array_splice($ramdom,2,2,array("j"=>45,"k"=>12));
+$ramdomDataCurrectway=$r1+$r2+$r3;
+print_r($ramdomData);
+print_r($ramdomDataCurrectway);
+print_r($ramdom);
+?>
