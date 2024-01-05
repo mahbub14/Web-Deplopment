@@ -1,14 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-    <title>Document</title>
-</head>
-<body>
-    <h1>
-        <?php
-        echo "Hello World";
-        ?>
-    </h1>
-</body>
-</html>
+<?php
+$numbers=range(11,20,2);
+print_r($numbers);
+$random=mt_rand(0,32);
+$luck=$numbers[$random];
+if($luck%2==0){
+    echo"Head\n";
+}
+else{
+    echo"Tail\n";
+}
+shuffle($numbers);
+print_r($numbers);
+?>
