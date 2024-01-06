@@ -1,14 +1,4 @@
 <?php
-$numbers=range(11,20,2);
-print_r($numbers);
-$random=mt_rand(0,32);
-$luck=$numbers[$random];
-if($luck%2==0){
-    echo"Head\n";
-}
-else{
-    echo"Tail\n";
-}
-shuffle($numbers);
-print_r($numbers);
+$string="Hello, Word\n";
+echo rtrim($string,',')."\n";
 ?>

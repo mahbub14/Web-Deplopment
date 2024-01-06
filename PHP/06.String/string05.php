@@ -1,7 +1,8 @@
 <?php
 //string token
 $string="Hello World How are you";
-$string2="Quick brown fox jumps over the lazy dog";$parts=explode(" ",$string);
+$string2="Quick brown fox jumps over the lazy dog";
+$parts=explode(" ",$string);
 print_r($parts);
 $orjinal=join(" ",$parts);
 echo $orjinal."\n";
