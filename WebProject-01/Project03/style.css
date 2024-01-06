@@ -1,12 +1,14 @@
 body{
     padding: 0;
     margin: 0;
+    background-color: #f1f1f1;
     
 }
 header{
     width: auto;
     display: flex; 
     justify-content: start;
+    
 }
 .navbar{
     justify-content: center;
@@ -25,14 +27,16 @@ ul{
     font-weight: bold;
     text-transform: uppercase;
    
+   
    }
    a{
     text-decoration: none;
     color: black;
+    
    }
    a:hover{
-    color: rgb(0, 9, 10);
-    background-color: rgb(238, 227, 227);
+    color:white;
+    background-color:#555;
     transition: all ease-in 0.5s;
    
    }
