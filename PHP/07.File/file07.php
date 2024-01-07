@@ -1,0 +1,37 @@
+<?php
+$filename="C:\\Users\\HP\\Documents\\Web-Devlopment\\PHP\\07.File\\f1.txt";
+$students=array(
+    array(
+        "fname"=>"Shahin",
+        "lname"=>"Ahmed",
+        "age"=>12,
+        "class"=>7,
+        "roll"=>11
+    ),
+    array(
+        "fname"=>"Rahim",
+        "lname"=>"Ahmed",
+        "age"=>12,
+        "class"=>17,
+        "roll"=>14
+    ),
+    array(
+        "fname"=>"Nikhil",
+        "lname"=>"Chandra",
+        "age"=>12,
+        "class"=>7,
+        "roll"=>14
+
+    )
+    );
+$fp=fopen("f3.txt","w");
+$data=serialize($students);
+file_put_contents("f4.txt",$data,LOCK_EX);
+$dataFromFile=file_get_contents("f4.txt");
+$allstudents=unserialize($dataFromFile);
+print_r($allstudents);
+unset($allstudents[1]);
+$data=serialize($students);
+file_put_contents("f4.txt",$data,LOCK_EX);
+?>
+

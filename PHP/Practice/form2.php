@@ -1,6 +1,6 @@
 <?php
-header( 'X-XSS-Protection:0' );
-
+include_once "form2-functions.php";
+$fruits = [ "mango", "orange", "Banana", "apple", "lemon", "peach" ];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,31 +20,33 @@ header( 'X-XSS-Protection:0' );
 <div class="container">
     <div class="row">
         <div class="column column-60 column-offset-20">
-            <h2>Our First Form</h2>
+            <h2>Select/Dropdowns</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magnam fugiat doloribus officia. Vero
                 illum debitis ipsam necessitatibus eaque sed.</p>
-               
-                          
+
+                <p>
+				<?php
+                //$sfruits = isset($_POST['fruits'])? $_POST['fruits']:array();
+                $sfruits= filter_input(INPUT_POST,'fruits',FILTER_SANITIZE_SPECIAL_CHARS, FILTER_REQUIRE_ARRAY);
+
+                if(count($sfruits)>0){
+                    echo "You have selected: ".join(", ",$sfruits);
+                }
+				?>
+            </p>
+
         </div>
-        <p>
-                    <?php if(isset($_GET["fname"])&&!empty($_GET["fname"])):?>
-                    First Name: <?php echo $_GET["fname"];?><br>
-                    <?php endif?>
-                    <?php if(isset($_GET["lname"])&&!empty($_GET["lname"])):?>
-                    Last Name: <?php echo $_GET["lname"];?><br>
-                    <?php endif?>
-                </p>
 
     </div>
     <div class="row">
         <div class="column column-60 column-offset-20">
-            <form method="GET">
-                <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname">
-
-                <label for="lname">Last Name</label>
-                <input type="text" name="lname" id="lname">
-
+            <form method="POST">
+                <label for="fruits">Select Some Fruits</label>
+                <select style="height:200px;" name="fruits[]" id="fruits" multiple>
+                    <option value="" disabled selected>Select Some Fruits</option>
+                
+				<?php displayOptions($fruits);?>	
+                </select>
 
                 <button type='submit'>Submit</button>
             </form>
