@@ -6,9 +6,9 @@
 }
 header{
     width: auto;
-    display: flex; 
-    justify-content: auto;
-    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .navbar{
     justify-content: center;
@@ -18,7 +18,7 @@ ul{
     list-style-type: none;
 }
 .navbar  ul li{
-    width: 170px;
+    /* width: 170px; */
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -26,8 +26,7 @@ ul{
     font-size: 16px;
     font-weight: bold;
     text-transform: uppercase;
-   
-   
+    padding: 10px 11px;
    }
    a{
     text-decoration: none;
