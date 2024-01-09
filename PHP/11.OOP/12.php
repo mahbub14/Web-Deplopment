@@ -1,29 +1,39 @@
 <?php
-class MathCalculator{
-    private $number;
-    static $name;
-    static function fibonacci($n){
-        echo self::$name."\n";
-        self::doSomething();
-        echo "Fibonacci series up to {$n}\n";
-    }
-
-    static function doSomething(){
-        echo "Doing something\n";
-    }
-
-    function factorial($n){
-        self::$name = "ABCD";
-        self::doSomething();
-        $this->doSomething();
-        $this->number = 12;
-        echo "Calculating factorial of {$n}\n";
+interface BaseAnimal{
+    function isAlive();
+    function canEat($param1,$param2);
+    function breed();
+}
+class Animal implements BaseAnimal{
+    function isAlive(){}
+    function canEat($param1,$param2){}
+    function breed(){}
+}
+interface BaseHuman extends BaseAnimal{
+    function canTalk();
+}
+class Human implements BaseHuman{
+    function isAlive(){}
+    function canEat($param1,$param2){}
+    function breed(){}
+    function canTalk(){}
+}
+abstract Class AbstractHuman implements BaseHuman{
+    abstract public function run();
+    function eat(){
+        echo "I am eat\n";
     }
 }
+class Human implements AbstractHuman{
+    function isAlive(){}
+    function canEat($param1,$param2){}
+    function breed(){}
+    function canTalk(){}
+}
+$h=new Human();
+echo $h instanceof BaseHuman;
+echo $h instanceof BaseAnimal;
 
-$mathc = new MathCalculator();
-$mathc->factorial(8);
-
-MathCalculator::fibonacci(7);
-echo MathCalculator::$name;
-
+$cat=new Animal();
+echo $cat instanceof BaseHuman;
+?>

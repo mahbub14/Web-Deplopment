@@ -25,7 +25,7 @@
     
 }
 #hero_area .btn{
-    background: brown;
+    background: rgb(45, 201, 149);
     color:#fff;
     font-size: 14px;
     padding: 12px 30px;
@@ -35,7 +35,7 @@
     
 }
 #hero_area .btn:hover{
-    background: blueviolet;
+    background: rgb(35, 209, 128);
 
 }
 .bg{
