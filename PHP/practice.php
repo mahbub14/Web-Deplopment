@@ -1,37 +1,32 @@
 <?php
 class Animal{
     protected $name;
-    function __construct($name=" "){
+    public function __construct($name){
         $this->name=$name;
-    }
-    function eat(){
+        }
+    public function eat(){
         echo"{$this->name} is eating\n";
     }
-    function run(){
-        echo"{$this->name} is runnig\n";
+    public function run(){
+        echo"{$this->name} is running\n";
     }
-    function sleep(){
+    public function sleep(){
         echo"{$this->name} is sleeping\n";
     }
-    function greet(){
-
-
-    }
-    protected function addTitle($titile){
-    $this->name=$titile." ".$this->name;
+    protected function addTittle($title){
+        $this->name=$title." ".$this->name;
     }
 }
 class Human extends Animal{
-   function greet(){
-    $this->addTitle("Mr");
-    echo"{$this->name} say Hi\n";
-   }
+
 }
 class Cat extends Animal{
-    function greet(){
-        echo "{$this->name} say MOow\n";
-    }
+
 }
-$h1=new Human("Rasel");
-$h1->greet();
+$h1=new Human("Mahbub");
+$h1->eat();
+$h1->run();
+$c1=new Cat("M");
+$c1->run();
+
 ?>

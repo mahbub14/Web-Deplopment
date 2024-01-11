@@ -33,11 +33,13 @@ ul{
     
    }
    a:hover{
+
     color:white;
     background-color:#555;
     transition: all ease-in 0.5s;
    
    }
+   
    .body{
     display: flex;
     justify-content: space-around;
@@ -45,10 +47,25 @@ ul{
 
          
    }
-.container1,.container2,.container3,.container4{
+.container{
     position: relative;
+    overflow: hidden;
+    border-radius: 10px;
 }
-.container1 .topleft {
+.content{
+    position:absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+.container:hover .content{
+    display: block;
+}
+.container:hover img{
+    transform: scale(1.1);
+}
+.container .topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -58,7 +75,7 @@ ul{
     border-radius: 1px;
     text-transform: uppercase;
   }
-  .container2 .topleft {
+  .container .topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -68,7 +85,7 @@ ul{
     border-radius: 1px;
     text-transform: uppercase;
   }
-  .container3 .topleft {
+  .container .topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -78,7 +95,7 @@ ul{
     border-radius: 1px;
     text-transform: uppercase;
   }
-  .container4 .topleft {
+  .container .topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -115,31 +132,30 @@ section{
     border: 1px solid palegoldenrod;
       
 }
-#hero_area{
+#bannar{
     background-image: url(./images/bg.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center ;
     padding: 100px 20px;
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     position: relative;
     z-index: 9;
 
 }
-#hero_area h2{
+#bannar h2{
     color: #fff;
     font-size: 78px;
     margin-bottom: 0;
 
 }
-#hero_area p{
+#bannar p{
     color: #fff;
-    font-size: 15px;
+    font-size: 25px;
     margin-bottom: 15px;
     
 }
-#hero_area .btn{
+#bannar .btn{
     background: rgb(45, 201, 149);
     color:#fff;
     font-size: 14px;
@@ -149,7 +165,7 @@ section{
     display: inline-block;
     
 }
-#hero_area .btn:hover{
+#bannar .btn:hover{
     background: rgb(35, 209, 128);
 
 }

@@ -11,6 +11,7 @@ while($line=fgets($fp)){
 }}
 echo "\n";
 //rewind($fp);
+//fseek($fp,8);
 fseek($fp,-1,SEEK_END);
 while($line=fgets($fp,5)){
     echo $line."-";
