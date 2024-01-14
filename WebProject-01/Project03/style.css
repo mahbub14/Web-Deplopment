@@ -17,7 +17,7 @@ ul{
     list-style-type: none;
 }
 .navbar  ul li{
-    /* width: 170px; */
+   
     height: 50px;
     line-height: 50px;
     text-align: center;
@@ -27,34 +27,39 @@ ul{
     text-transform: uppercase;
     padding: 10px 11px;
    }
-   a{
+a{
     text-decoration: none;
     color: black;
     
-   }
-   a:hover{
+}
+a:hover{
 
     color:white;
     background-color:#555;
     transition: all ease-in 0.5s;
    
    }
-   
-   .body{
+.icon i{
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.body{
     display: flex;
     justify-content: space-around;
-   
-
-         
-   }
+        
+}
 .container{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
 }
 .content{
+    background-color: #fff;
+    border: 1px solid white;
     position:absolute;
-    bottom: 0;
+    width: 280px;
+    height: 100px;
+    bottom: 10%;
     left: 50%;
     transform: translateX(-50%);
     display: none;
@@ -65,7 +70,10 @@ ul{
 .container:hover img{
     transform: scale(1.1);
 }
-.container .topleft {
+.container1{
+     position: relative;
+}
+.container1 .topleft {
     position: absolute;
     top: 8px;
     left: 16px;
@@ -75,36 +83,7 @@ ul{
     border-radius: 1px;
     text-transform: uppercase;
   }
-  .container .topleft {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
-    background-color: red;
-    color: #fff;
-    border-radius: 1px;
-    text-transform: uppercase;
-  }
-  .container .topleft {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
-    background-color: red;
-    color: #fff;
-    border-radius: 1px;
-    text-transform: uppercase;
-  }
-  .container .topleft {
-    position: absolute;
-    top: 8px;
-    left: 16px;
-    font-size: 18px;
-    background-color: red;
-    color: #fff;
-    border-radius: 1px;
-    text-transform: uppercase;
-  }
+ 
    .body li{
     display: flex;
     list-style: none;
@@ -115,12 +94,7 @@ ul{
     height: 350px;
     width: 350px;
    }
-   .section2{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-   }
+  
 section{
     margin-bottom: 100px;
 }
@@ -179,3 +153,10 @@ section{
     opacity: 0.4;
     z-index: -1;
 }
+.section2{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+ 
+   
+   }

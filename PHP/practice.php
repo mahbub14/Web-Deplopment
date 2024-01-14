@@ -1,32 +1,19 @@
 <?php
-class Animal{
-    protected $name;
-    public function __construct($name){
-        $this->name=$name;
-        }
-    public function eat(){
-        echo"{$this->name} is eating\n";
-    }
-    public function run(){
-        echo"{$this->name} is running\n";
-    }
-    public function sleep(){
-        echo"{$this->name} is sleeping\n";
-    }
-    protected function addTittle($title){
-        $this->name=$title." ".$this->name;
-    }
+class MyException extends Exception{}
+class NetWorkException extends Exception{}
+function testException(){
+  throw new NetWorkException();
 }
-class Human extends Animal{
-
+try{
+  testException();
 }
-class Cat extends Animal{
-
+catch(MyException $e){
+ echo"MyException Caugth\n";
 }
-$h1=new Human("Mahbub");
-$h1->eat();
-$h1->run();
-$c1=new Cat("M");
-$c1->run();
-
+catch(NetWorkException $e){
+  echo"NetWorkException Caugth\n";
+}
+finally{
+  echo"Cleaned Up\n";
+}
 ?>

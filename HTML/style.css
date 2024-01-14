@@ -1,39 +1,57 @@
-/* body {
-  background-color:aliceblue;
-}
-/* a {
-  color:#000000;
-  font-size: 50px;
-  text-decoration:none;
-} */
-/* img {
- max-width: 90%;
-}
-table {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
-}
-td, th {
-  border: 1px solid #000000;
-} */
-/* ul {
-  /* list-style-type: circle; */
-  /* list-style-type: square; */
-  /* list-style-type: disc; */
-  /* list-style-type: none;
-} */
-/* h1, p,span,strong{
-  border: 1px solid red;
-}*/  
-#title{
-  background-color: red;
- color:white;
- padding: 10px;
+body{
+  font-family: "Poppins", sans-serif;
+  margin: 0;
 
 }
-.title{
-  background-color: yellowgreen;
+#main_menu{
+  background-color: #1b1464;
+
 }
-iframe {
- border: 0;
+#main_menu ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+#main_menu li{
+  display: inline-block;
+  position: relative;
+}
+#main_menu li a{
+  display: block;
+  padding: 12px 15px;
+  color: aliceblue;
+  text-decoration: none;
+}
+#main_menu li a:hover{
+   background: #0652DD;
+
+}
+/* drop down */
+#main_menu ul ul{
+  position: absolute;
+  left: 0;
+  top: 48px;
+  background-color: #5758bb;
+  width: 200px;
+  display:none;
+}
+#main_menu ul ul li{
+  display: block;
+}
+#main_menu  ul li:hover ul{
+  display: block;
+  
+}
+#main_menu  ul li:hover a{
+  background: #160a56;
+  
+}
+#main_menu  ul li:hover li a{
+  background: none;
+  
+}
+#main_menu ul ul li a:hover{
+  background: #160a56;
+  
 }
