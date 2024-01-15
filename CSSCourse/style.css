@@ -1,9 +1,44 @@
-.parent{
-    background-color: #574b98;
-    color:#fff;
-    width: 24%;
-    margin: 1%;
-    padding: 2%;
-    border: 0.5em solid tomato;
-    float: left;
+*{
+    margin:0;
+    color:wheat;
+    padding: 0;
+}
+body{
+    background-image: url("bg.jpg");
+}
+h1{
+    color:red;
+    font-size: 60px;
+}
+p{
+    font-size: 18px;
+}
+div{
+    width: 200px;
+    height: 200px;
+    background: aqua;
+    margin-bottom: 20px;
+}
+div p{
+    color: black;
+}
+.text-bk{
+    color:red;
+    background: aqua;
+    margin: 20px;
+}
+.first-div{
+    background: blue;
+}
+.first-div p{
+    color:white;
+}
+.first-div p{
+    color:black;
+}
+.fist-div{
+    margin: 0;
+}
+#big-div,#big-div-2,.first-div{
+    width: 400px;
 }
