@@ -182,6 +182,9 @@ section{
     color: #B20808;
     background-color: #FFD9D9;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .section2 .item .middle{
     padding: 25px;
@@ -189,10 +192,17 @@ section{
 .section2 .item:hover{
     background-color: #ED4B4B;
 }
+.section2 .item:hover .right{
+    background-color: #ffffff;
+}
 .section2 .item span{
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+    
+}
+.section2 .item .right span{
+    font-size: 20px;
     
 }
 .section4{
@@ -239,7 +249,7 @@ section{
     right: 1px;
    
     
-}
+}0
 .right-right{
     position: relative;
     width: 400px;

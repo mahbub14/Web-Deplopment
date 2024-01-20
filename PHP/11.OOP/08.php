@@ -1,5 +1,5 @@
 <?php
-abstract class shape{
+abstract class Shape{
     abstract function getArea();
     abstract function getPerimeter();
 }
