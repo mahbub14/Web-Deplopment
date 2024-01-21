@@ -249,7 +249,7 @@ section{
     right: 1px;
    
     
-}0
+}
 .right-right{
     position: relative;
     width: 400px;
@@ -292,3 +292,53 @@ section{
     
     
 }
+.footer{
+    display: flex;
+    justify-content:space-between;
+    }
+    .footer a{
+     text-decoration: none;
+     display: flex;
+     flex-direction: column;
+     color:darkgray;
+    }
+    .footer a:hover{
+     color: black;
+     background-color:#FFF;
+    }
+   .footer .footer-left{
+     display: flex;
+     text-align: left;
+     justify-content: space-between;
+     width: 60%;
+    
+   }
+   .footer .footer-left i{
+    border-radius: 2px ;
+   }
+   .footer .footer-left i:hover{
+    background-color: #ed4b4b;
+   }
+   .footer .footer-right{
+      width: 40%;
+   }
+   .footer .footer-right .frlast{
+    margin-left: 25px;
+   }
+   .footer .footer-right .fbtn{
+    border: 1px solid;
+    background-color: black;
+    color:white;
+    width: 435px;
+    height: 49px;
+    border-radius: 5px;
+    display: block;
+   }
+   .footer .footer-right .femail{
+     text-align: center;
+     width: 433px;
+     height: 42px;
+   }
+   .footer .footer-right .fbtn:hover{
+     background-color: #ed4b4b;
+   }
