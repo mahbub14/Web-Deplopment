@@ -8,6 +8,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 .navbar{
     justify-content: center;
@@ -46,12 +47,15 @@ a:hover{
 .body{
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
         
 }
 .container{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    flex-shrink: 1;
+    
 }
 .content{
     background-color: #fff;
@@ -78,7 +82,7 @@ a:hover{
     top: 8px;
     left: 16px;
     font-size: 18px;
-    background-color: red;
+    background-color: #ed4b4b;
     color: #fff;
     border-radius: 1px;
     text-transform: uppercase;
@@ -154,18 +158,65 @@ section{
     z-index: -1;
 }
 .section2{
-    display:grid;
-    grid-template-columns: auto auto auto auto auto auto;
-    row-gap: 8px;
+    display:flex;
+    flex-wrap: wrap;
     justify-content: space-around;
-   
-   
 }
 .section2 .item{
     display: flex;
     border:2px groove white;
     border-radius: 50px;
     align-items: center;
+ 
+}
+.one{
+   
+    flex-basis: 250px;
+ 
+}
+.two{
+  
+    flex-basis: 250px;
+}
+.three{
+   
+    flex-basis: 250px;
+}
+.four{
+  
+    flex-basis: 250px;
+}
+.five{
+  
+    flex-basis: 250px;
+}
+.six{
+   
+    flex-basis: 250px;
+}
+.seven{
+    
+    flex-basis: 250px;
+}
+.eight{
+    
+    flex-basis: 250px;
+}
+.nine{
+   
+    flex-basis: 250px;
+}
+.ten{
+ 
+    flex-basis: 250px;
+}
+.eleven{
+   
+    flex-basis: 250px;
+}
+.twilve{
+    
+    flex-basis: 250px;
 }
 .section2 .item .left img{
     border: 4px solid white;
@@ -207,6 +258,7 @@ section{
 }
 .section4{
     display:flex;
+    flex-wrap: wrap;
     justify-content: space-between;
    
    
@@ -220,6 +272,7 @@ section{
     padding-left: 25px;
     padding-right: 25px;
     align-items: center;
+   
 }
 .section4 .right{
     display: flex;
@@ -230,6 +283,7 @@ section{
     padding-left: 25px;
     padding-right: 25px;
     align-items: center;
+   
 }
 .section4 .left .left-left{
     color:#B20808;
@@ -294,6 +348,7 @@ section{
 }
 .footer{
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     }
     .footer a{
@@ -306,26 +361,19 @@ section{
      color: black;
      background-color:#FFF;
     }
-   .footer .footer-left{
-     display: flex;
-     text-align: left;
-     justify-content: space-between;
-     width: 60%;
-    
-   }
+   
    .footer .footer-left i{
     border-radius: 2px ;
    }
-   .footer .footer-left i:hover{
+   .footer  i:hover{
     background-color: #ed4b4b;
    }
-   .footer .footer-right{
-      width: 40%;
-   }
-   .footer .footer-right .frlast{
+  
+   .footer .frlast{
     margin-left: 25px;
+    
    }
-   .footer .footer-right .fbtn{
+   .footer  .fbtn{
     border: 1px solid;
     background-color: black;
     color:white;
@@ -334,11 +382,27 @@ section{
     border-radius: 5px;
     display: block;
    }
-   .footer .footer-right .femail{
+   .footer .femail{
      text-align: center;
      width: 433px;
      height: 42px;
    }
-   .footer .footer-right .fbtn:hover{
+   .footer  .fbtn:hover{
      background-color: #ed4b4b;
    }
+.flfirst{
+  
+    flex-basis: 200px;
+}
+.flsecond{
+    flex-basis: 200px;
+}
+.flthird{
+    flex-basis: 200px;
+}
+.flfourth{
+ flex-basis: 200px;
+}
+.frlast{
+    flex-basis: 200px;
+}
