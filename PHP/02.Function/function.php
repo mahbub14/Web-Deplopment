@@ -24,7 +24,7 @@ function sum1(int $x=0,int $y=0,int $z=0):int{
    
     return $x+$y+$z;
 }
-function sum1(int...$number):int{
+function sum2(int...$number):int{
     $result=0;
     for($i=0;$i<count($number);$i++){
         $result+=$number[$i];

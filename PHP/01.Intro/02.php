@@ -1,6 +1,6 @@
 <?php
 //variable
-//php phr
+//php psr =PHP Standard Recommendation
 $name="Bangladesh";
 $question="How are you?";
 $age=25;
