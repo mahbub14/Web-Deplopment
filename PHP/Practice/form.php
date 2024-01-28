@@ -1,7 +1,18 @@
 <?php
-header( 'X-XSS-Protection:0' );
-include_once "function.php";
+$allowedTypes = array(
+	'image/png',
+	'image/jpg',
+	'image/jpeg'
+);
+if($_FILES['photo']){
+    $fileCount=count($_FILES['photo']['name']);
+    for($i=0;$i<$fileCount;$i++){
+    if(in_array( $_FILES['photo']['type'][$i],$allowedTypes ) !== false&&$_FILES['photo']['size'][$i]<5*1024*1024)
+    move_uploaded_file($_FILES['photo']['tmp_name'][$i],$_FILES['photo']['name'][$i]);
+    }
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,58 +31,37 @@ include_once "function.php";
 <div class="container">
     <div class="row">
         <div class="column column-60 column-offset-20">
-            <h2>Our First Form</h2>
+            <h2>File Upload</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid magnam fugiat doloribus officia. Vero
                 illum debitis ipsam necessitatibus eaque sed.</p>
-             <div>
-                <?php
-                $fname='';
-                $lname='';
-                $checked='';
-                if(isset($_REQUEST['fname'])&&!empty($_REQUEST['fname'])){
-                 $fname=htmlspecialchars($_REQUEST['fname']);
-                }
-                if(isset($_REQUEST['lname'])&&!empty($_REQUEST['lname'])){
-                    $lname=htmlspecialchars( $_REQUEST['lname']);
-                }
-                if(isset($_REQUEST['cb1'])&&$_REQUEST['cb1']==1){
-                    $checked="checked";
-                }
-                ?>
-                First Name:<?php echo $fname?> <br>
-                Last Name:<?php echo $lname?> <br>
-             </div>
-              
+        <pre>
+           <P>
+           <?php
+            print_r($_POST);
+            print_r($_FILES);
+           ?>
+           </P>
+        </pre>
         </div>
-    
+
     </div>
     <div class="row">
         <div class="column column-60 column-offset-20">
-            <form  method="POST">
+            <form method="POST" enctype="multipart/form-data">
                 <label for="fname">First Name</label>
-                <input type="text" name="fname" id="fname" value="<?php echo $fname?>">
+                <input type="text" name="fname" id="fname">
 
                 <label for="lname">Last Name</label>
-                <input type="text" name="lname" id="lname" value="<?php echo $lname?>">
+                <input type="text" name="lname" id="lname">
 
-                <div>
-                    <input type="checkbox" name="cb1" id="cb1" value="1" <?php echo $checked;?>>
-                    <label for="cb1" class="label-inline">Some Checkbox</label>
-                </div>
-                 <label class="label">Select Some Fruits</label>
+                <label for="photo">Photo</label>
+                <input type="file" name="photo[]" id="photo"><br/>
+                <input type="file" name="photo[]" id="photo"><br/>
+                <input type="file" name="photo[]" id="photo"><br/>
 
-                <input type="checkbox" name="fruits[]" value="orange" <?php echo isChecked('fruits','orange'); ?> >
-                <label class="label-inline" for="orange">Orange</label><br/>
-                <input type="checkbox" name="fruits[]" value="mango" <?php echo isChecked('fruits','mango'); ?>>
-                <label class="label-inline" for="mango">Mango</label><br/>
-                <input type="checkbox" name="fruits[]" value="banana"<?php echo isChecked('fruits','banana'); ?>>
-                <label class="label-inline" for="banana">Banana</label><br/>
-                <input type="checkbox" name="fruits[]" value="lemon" <?php echo isChecked('fruits','lemon'); ?>>
-                <label class="label-inline" for="lemon">Lemon</label><br/>
-                <button type='submit'>Submit</button>
+                <button type='submit' name="submit" value="submit">Submit</button>
             </form>
         </div>
-
     </div>
 </div>
 </body>
