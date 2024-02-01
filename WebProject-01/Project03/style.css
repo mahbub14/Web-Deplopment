@@ -218,6 +218,9 @@ section{
     
     flex-basis: 250px;
 }
+.p-10{
+    padding: 10px;
+}
 .section2 .item .left img{
     border: 4px solid white;
     border-radius: 50px;

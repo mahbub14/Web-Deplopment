@@ -1,0 +1,85 @@
+.product{
+  display: flex;
+  justify-content:space-between;
+  }
+  .product:hover .content{
+   display: block;
+ }
+ .product .pfirst:hover img{
+   transform: scale(1.1);
+   
+ }
+ .product .pfirst{
+   position: relative;
+   overflow: hidden;
+ }
+ .product .pfirst .product-topleft {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
+  background-color: #ed4b4b;
+  color: #fff;
+  border-radius: 1px;
+  text-transform: uppercase;
+ }
+ .product .psecond{
+  padding: 15px
+ }
+ .product .psecond .psecond-one .left{
+   display: flex;
+   background-color:#FFE3E3;
+   border: 2px solid #B20808;
+   width: 450px;
+   height: 74px;
+   padding-left: 25px;
+   padding-right: 25px;
+   align-items: center;
+ }
+ .product .psecond .psecond-one .left .left-right{
+  position: relative;
+  border: 1px solid  #B20808;
+  border-radius: 7px;
+  background-color:  #B20808;
+  color: white;
+  height: 32px;
+  font-size: 25px;
+  font-weight: 500;
+  left: 128px;
+ 
+ }
+
+ .pthird{
+
+ }
+ .pthird table{
+  width: 420px;
+ }
+ 
+ .d-flex{
+  display: flex;
+  width: 1000px;
+ }
+
+ .child1{
+  background-color: red;
+  flex-basis: 50%;
+ }
+ .child2{
+  background-color: green;
+  flex-basis: 20%;
+ }
+ .child3{
+  background-color: yellow;
+  flex-basis: 20%;
+ }
+ .child4{
+  background-color: pink;
+  flex-basis: 10%;
+ }
+
+ @media only screen and (max-width:800px){
+  .product{
+    display: block;
+   }
+ }
