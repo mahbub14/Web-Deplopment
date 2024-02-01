@@ -7,3 +7,4 @@ $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 $date = date("Y:m:d H:j:s");
 error_log("{$date} Log in a new file 6 \n",3,"/tmp/error.txt");
 
+?>

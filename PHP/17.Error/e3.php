@@ -14,3 +14,4 @@ function fatal_error_handler(){
 echo str_repeat("*",2**21);
 //no_function();
 
+?>

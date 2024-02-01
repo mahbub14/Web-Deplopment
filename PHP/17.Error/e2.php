@@ -30,3 +30,4 @@ function division($divident, $divisor){
 }
 
 echo division(8,0);
+?>
