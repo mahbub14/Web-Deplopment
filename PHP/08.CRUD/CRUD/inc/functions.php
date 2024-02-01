@@ -44,9 +44,11 @@ function generateReport() {
     echo '<table>';
     echo '<tr>
             <th>Name</th>
-            <th>Roll</th>
-            <th width="25%">Action</th>
+            <th>Roll</th>';
+           if(isAdmin()|| isEditor()){ 
+          echo ' <th width="25%">Action</th>
         </tr>';
+           }
     
     foreach ($students as $student) {
         echo '<tr>';
