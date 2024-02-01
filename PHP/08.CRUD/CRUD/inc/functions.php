@@ -52,7 +52,12 @@ function generateReport() {
         echo '<tr>';
         echo '<td>' . htmlspecialchars($student['fname'] . ' ' . $student['lname']) . '</td>';
         echo '<td>' . htmlspecialchars($student['roll']) . '</td>';
+          if(isAdmin()){
         echo '<td><a href="index.php?task=edit&id=' . htmlspecialchars($student['id']) . '">Edit</a> | <a class="delete" href="index.php?task=delete&id=' . htmlspecialchars($student['id']) . '">Delete</a></td>';
+          }
+          if(isEditor()){
+            echo '<td><a href="index.php?task=edit&id=' . htmlspecialchars($student['id']) . '">Edit</a></td>';
+              }
         echo '</tr>';
     }
 
