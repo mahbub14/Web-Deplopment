@@ -1,0 +1,61 @@
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    
+}
+nav a{
+    color: #fff;
+}
+.header a{
+    color: #fff;
+}
+#main_menu ul li a{
+    color: #fff;
+}
+.hero{
+    background-image: url(/images/big-14.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: -1;
+
+        
+}
+.hero::after{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    content:'';
+    background-color: rgba(0, 0, 0, 0.465);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    
+}
+
+.hero-area{
+    padding-top: 200px;
+    height: 100vh;
+    align-items: center;
+    width: 70%;
+    margin: auto;
+    color:#fff;
+      
+}
+
+.child h1{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 150px;
+    font-weight: 800;
+    letter-spacing: 20px;
+    
+}
+.child a{
+    z-index: 10;
+}
