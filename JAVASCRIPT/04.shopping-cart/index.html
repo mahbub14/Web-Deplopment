@@ -27,11 +27,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button class="btn btn-default"><i class="fas fa-minus" id="phoneMinusbtn"></i></button>
+                           <input type="number" min="0" class="form-control text-center"id="noPhoneItem" value="1">
+                           <button class="btn btn-default"  id="phonePlusbtn"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$1219</h5>
+                        <h5>$<span id="phonePrice">1219</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -45,12 +45,12 @@
                      </div>
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
-                           <input type="number" min="0" class="form-control text-center" value="1">
-                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
+                           <button class="btn btn-default" id="coverMinusbtn"><i class="fas fa-minus"></i></button>
+                           <input type="number" min="0" class="form-control text-center" id="noCoverItem" value="1">
+                           <button class="btn btn-default" id="coverPlusbtn"><i class="fas fa-plus"></i></button>
 
                         </div>
-                        <h5>$59</h5>
+                        <h5>$<span id="coverPrice">56</span></h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -66,9 +66,9 @@
                      </div>
 
                      <div class="col-md-4 status">
-                        <h5>$1,278</h5>
+                        <h5>$<span id="Subtotal">1275</span></h5>
                         <h5>$0</h5>
-                        <h5>$1,278</h5>
+                        <h5>$<span id="total">1275</span></h5>
                      </div>
                   </div>
                </div>
@@ -80,5 +80,80 @@
       </div>
    </section>
 </body>
+<script>
+   //phone section
+  const phonePlus=document.getElementById("phonePlusbtn");
+  phonePlus.addEventListener("click",function(){
+   const number= updateforPlus("noPhoneItem");
+   document.getElementById("noPhoneItem").value=number;
+   updatePrice(1219,number,"phonePrice"); 
+   updateTotal();
+  
+  });
 
+  const phoneMinus=document.getElementById("phoneMinusbtn");
+  phoneMinus.addEventListener("click",function(){
+   const number=updateforMinus("noPhoneItem")
+   document.getElementById("noPhoneItem").value=number;
+   updatePrice(1219,number,"phonePrice"); 
+   updateTotal();
+   
+
+   
+  });
+  const phoneItem=document.getElementById("noPhoneItem");
+   phoneItem.addEventListener("input",function(){
+   const number=document.getElementById("noPhoneItem").value;
+   updatePrice(1219,number,"phonePrice");
+   updateTotal();
+  });
+  //cover section
+  const coverMinus=document.getElementById("coverMinusbtn");
+  coverMinus.addEventListener("click",function(){
+   const number= updateforMinus("noCoverItem");
+   document.getElementById("noCoverItem").value=number;
+   updatePrice(59,number,"coverPrice");
+   updateTotal();
+
+  });
+  const coverPlus=document.getElementById("coverPlusbtn");
+  coverPlus.addEventListener("click",function(){
+   const number= updateforPlus("noCoverItem");
+   document.getElementById("noCoverItem").value=number;
+   updatePrice(59,number,"coverPrice");
+   updateTotal();
+
+  });
+  const coverItem=document.getElementById("noCoverItem");
+    coverItem.addEventListener("input",function(){
+   const number=document.getElementById("noCoverItem").value;
+   updatePrice(59,number,"coverPrice");
+   updateTotal();
+  });
+  function updateforPlus(id){
+   const noItem=document.getElementById(id).value;
+   const itemNumber=parseFloat(noItem);
+   const number=itemNumber+1;
+   return number;
+  }
+  function updateforMinus(id){
+   const noItem=document.getElementById(id).value;
+   const itemNumber=parseFloat(noItem);
+   const number=itemNumber-1;
+   return number;
+  }
+  function updatePrice(price,item,id){
+      const newprice=price*item;
+      document.getElementById(id).innerText=newprice;
+  }
+  function updateTotal(){
+   const item1Price=document.getElementById("phonePrice").innerText;
+   const item2Price=document.getElementById("coverPrice").innerText;
+   const price1=parseFloat(item1Price);
+   const price2=parseFloat(item2Price);
+   
+   document.getElementById("Subtotal").innerText=price1+price2;
+   document.getElementById("total").innerText=price1+price2;
+  }
+</script>
 </html>
