@@ -30,6 +30,10 @@
   cursor: pointer;
   margin: 10px;
 }
+.calculator form input:active{
+    box-shadow: -4px -4px 7px rgba(255, 255, 255, 0.1),3px 3px 7px rgba(0, 0, 0, 0.1) ;
+    transform: scale(0.98);
+}
 form .display{
   display: flex;
   justify-content: flex-end;
