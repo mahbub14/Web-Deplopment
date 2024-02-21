@@ -1,6 +1,7 @@
 <?php
-session_name("Myapp");
-session_start();
-echo $_SESSION["fname"];
-
-?>
+if($x>$y){
+//     echo"$x is greater then $y";
+// }
+// else{
+//     echo"$y is greater then $x";
+// }

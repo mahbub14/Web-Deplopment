@@ -1,6 +1,10 @@
 <?php
-session_name("Myapp");
-session_start();
-$_SESSION['fname']="Hasan";
-echo $_SESSION["fname"];
-?>
+$student=[
+  'fname'=>'Mahbub',
+  'lname'=>'Hasan',
+  'phone'=>'0186923430'
+];
+foreach($student as $key=>$value){
+  echo $key." = ".$value."\n";
+}
+echo count($student);
